@@ -14,7 +14,6 @@ import it.asl.teramo.healthmiddleware.hl7.service.interfaces.message.HL7InboudHL
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
