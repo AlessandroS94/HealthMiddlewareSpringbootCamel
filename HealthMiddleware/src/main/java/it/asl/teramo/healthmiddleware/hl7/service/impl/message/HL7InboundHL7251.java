@@ -60,7 +60,26 @@ public class HL7InboundHL7251 implements HL7InboudHL7251 {
 
     @Override
     public ORL_O22 receiver(OML_O21 omlO21) {
-        return null;
+        ORL_O22 orlO22 = new ORL_O22();
+        String controlIDMessage = omlO21.getMSH().getMessageControlID().getValue();
+        String applicationSending = omlO21.getMSH().getSendingApplication().getNamespaceID().getValue();
+        String applicationReceiving = omlO21.getMSH().getReceivingApplication().getNamespaceID().getValue();
+        try {
+            orlO22.getMSA().getAcknowledgmentCode().setValue("AA");
+            orlO22.getMSH().getMessageControlID().setValue(controlIDMessage);
+            orlO22.getMSH().getSendingApplication().getNamespaceID().setValue(applicationSending);
+            orlO22.getMSH().getReceivingApplication().getNamespaceID().setValue(applicationReceiving);
+            /*
+             * STUB RETURN MESSAGE
+             */
+
+        } catch (HL7Exception e) {
+            log.error("Errore nell'inserimento dei dati HL7 ORL_O22 HL7Exception: " + e.getMessage());
+            throw new RuntimeException("Errore nella generazione del messaggio");
+        }
+
+        return orlO22;
+
     }
 
     @Override

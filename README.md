@@ -22,15 +22,15 @@ Studio di fattibilità di un sistema interoperabile tra cartelle cliniche specia
 
 ## 🛠️ Tecnologie
 
-| Componente | Descrizione |
-|-----------|------------|
-| **Framework** | Spring Boot 3.x, Spring MVC, Spring Data JPA |
-| **Message Routing** | Apache Camel |
-| **Standard** | Jakarta EE, HL7 v2 |
-| **ORM** | Hibernate (Spring Data JPA) |
-| **Code Generation** | Lombok |
-| **Build Tool** | Maven |
-| **Java** | JDK 25 |
+| Componente          | Descrizione                                  |
+|---------------------|----------------------------------------------|
+| **Framework**       | Spring Boot 3.x, Spring MVC, Spring Data JPA |
+| **Message Routing** | Apache Camel                                 |
+| **Standard**        | Jakarta EE, HL7 v2                           |
+| **ORM**             | Hibernate (Spring Data JPA)                  |
+| **Code Generation** | Lombok                                       |
+| **Build Tool**      | Maven                                        |
+| **Java**            | JDK 25                                       |
 ---
 
 ## 🚀 Quick Start
