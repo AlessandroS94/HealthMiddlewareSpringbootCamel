@@ -75,6 +75,6 @@ L'applicazione sarà disponibile a `http://localhost:8080`
 - ✅ Gestione persistenza con Spring Data JPA
 
 ### Healthcare Standards
-- ✅ Conformità HL7 v2
+- ✅ Conformità HL7 v2.5.1
 - ✅ Jakarta EE compatibility
 - ✅ HIPAA-ready architecture
