@@ -57,10 +57,12 @@ public class HL7251ReceiverRoute extends RouteBuilder {
                     @Override
                     public void process(Exchange exchange) throws Exception {
                         String payload = exchange.getIn().getBody(String.class);
-                        HapiContext hapiContext = new DefaultHapiContext();
-                        Parser xmlParser = hapiContext.getXMLParser();
+                        Parser xmlParser;
+                        try (HapiContext hapiContext = new DefaultHapiContext()) {
+                            xmlParser = hapiContext.getXMLParser();
+                        }
                         Message message = xmlParser.parse(payload);
-                        String ackresponse = "";
+                        String ackresponse;
                         switch (message) {
                             case QBP_Q11 receivedMessage -> ackresponse = hl7InboudHL7251.receiver(receivedMessage).toString();
                             case QBP_Q21 receivedMessage -> ackresponse = hl7InboudHL7251.receiver(receivedMessage).toString();
